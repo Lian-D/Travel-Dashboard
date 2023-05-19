@@ -1,4 +1,56 @@
-name,country,visitors,lat,lon,complete?
+name,country,visitors,lat,lon,complete
+Cairo,Egypt,planned,30.0444,31.2357,false
+Luxor,Egypt,planned,25.6872,32.6396,false
+Aswan,Egypt,planned,24.0889,32.8998,false
+Jerusalem,Israel,planned,31.0461,34.8516,false
+Istanbul,Turkey,planned,41.0082,28.9784,false
+Bodrum,Turkey,planned,37.0344,27.4305,false
+Athens,Greece,planned,37.9838,23.7275,false
+Rhodes,Greece,planned,36.4341,28.2176,false
+Thessaloniki,Greece,planned,40.6401,22.9444,false
+Hanoi,Vietnam,planned,21.0278,105.8342,false
+Ho Chi Minh City,Vietnam,planned,10.8231,106.6297,false
+Calgary,Canada,planned,51.0447,-114.0719,false
+Halifax,Canada,planned,44.8857,-63.1005,false
+Boston,USA,planned,42.3601,-71.0589,false
+New York,USA,planned,40.7128,-74.0060,false
+Charleston,USA,planned,32.7765,-79.9311,false
+Dallas,USA,planned,32.7767,-96.7970,false
+Atlanta,USA,planned,33.7488,-84.3877,false
+Miami,USA,planned,25.7617,-80.1918,false
+Orlando,USA,planned,28.5384,-81.3789,false
+New Orleans,USA,planned,29.9511,-90.0715,false
+Barcelona,Spain,planned,41.3874,-2.1686,false
+Granada,Spain,planned,37.1775,-3.5984,false
+Madrid,Spain,planned,40.4168,-3.7038,false
+Valencia,Spain,planned,39.4699,-0.3763,false
+Ibiza,Spain,planned,39.0200,1.4821,false
+Dublin,Ireland,planned,53.3498,-6.2603,false
+Edinburgh,UK,planned,55.9533,-3.1883,false
+Glasgow,UK,planned,55.8642,-4.2518,false
+Manchester,UK,planned,53.4808,-2.2426,false
+Bristol,UK,planned,51.4545,-2.5879,false
+London,UK,planned,51.5072,-0.1276,false
+Nice,France,planned,43.7102,7.2620,false
+Lyon,France,planned,45.7640,4.8357,false
+Bordeau,France,planned,44.8378,-0.5792,false
+Paris,France,planned,48.8566,2.3522,false
+Hamburg,Germany,planned,53.5488," 9.9872",false
+Munich,Germany,planned,48.1351,11.5820,false
+Frankfurt,Germany,planned,50.1109,8.6821,false
+Berlin,Germany,planned,52.5200,13.4050,false
+Milan,Italy,planned,45.4642,9.1900,false
+Venice,Italy,planned,45.4408,12.3155,false
+Rome,Italy,planned,41.9028,12.4964,false
+Vienna,Austria,planned,48.2082,16.3738,false
+Taiwan,China,planned,25.0330,121.5654,false
+Singapore,Japan,planned,1.3521,103.8198,false
+Hokkaido,Japan,planned,43.0618,141.3545,false
+Cuba,Cuba,planned,21.5218,-77.7812,false
+Nagasaki and Hiroshima,Japan,Planned 2024,32.7503,129.8779,false
+Okinawa,Japan,Planned 2024,26.3344,127.8056,false
+Kyoto,Japan,Planned 2024,35.0116,135.7681,false
+Tokyo,Japan,Planned 2023,35.6762,139.6503,false
 Honolulu,USA,2022,21.3099,-157.8581,true
 Montreal + Toronto,Canada,2018,43.651070,-79.347015,true
 Harbin,China,2018,45.7567," 126.6424",true

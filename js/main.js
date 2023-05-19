@@ -6,9 +6,9 @@ Promise.all([
   d3.json('data/world-110m.json'),
   d3.csv('data/world_wonders.csv')
 ]).then(data => {
-  data[1].forEach(d => {
-    d.visitors = +d.visitors;
-  })
+  // data[1].forEach(d => {
+  //   d.visitors = +d.visitors;
+  // })
 
   const geoMap = new GeoMap({ 
     parentElement: '#map'

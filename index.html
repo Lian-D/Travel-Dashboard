@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>D3 Symbol Map</title>
-    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <title>Lian's Travel Map</title>
+    <link rel="icon" href="favicon.ico"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body text-align: center;>
     <!-- Add HTML content, SVG drawing area, ... -->
     <div class="header">
       <h1>
-        Lian's World Domination Plans
+        🗺️ Lian's World Domination Plans📍
       </h1>
     </div>
 <body>
-    <div id="map"></div>
+    <div id="map" style="margin: auto; display: block;" text-align: center;></div>
     <div id="tooltip"></div>
     
     <script src="js/d3.v6.min.js"></script>
     <script src="js/topojson.v3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-geo@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4"></script>
     <script src="js/geoMap.js"></script>
     <script src="js/main.js"></script>
 </body>
