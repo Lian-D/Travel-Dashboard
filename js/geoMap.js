@@ -8,8 +8,8 @@ class GeoMap {
   constructor(_config, _geoData, _data) {
     this.config = {
       parentElement: _config.parentElement,
-      containerWidth: _config.containerWidth || 1000,
-      containerHeight: _config.containerHeight || 400,
+      containerWidth: _config.containerWidth || 2000,
+      containerHeight: _config.containerHeight || 800,
       margin: _config.margin || {top: 0, right: 0, bottom: 0, left: 0},
       tooltipPadding: 10
     }
@@ -71,7 +71,7 @@ class GeoMap {
 
     // Append world map
     const geoPath = vis.chart.selectAll('.geo-path')
-        .data(topojson.feature(vis.geoData, vis.geoData.objects.countries).features)
+      .data(topojson.feature(vis.geoData, vis.geoData.objects.countries).features)
       .join('path')
         .attr('class', 'geo-path')
         .attr('d', vis.geoPath);
@@ -88,7 +88,7 @@ class GeoMap {
         .data(vis.data)
       .join('circle')
         .attr('class', 'geo-symbol')
-        .attr('r', d => vis.symbolScale(d.visitors))
+        .attr('r', d => 3)
         .attr('cx', d => vis.projection([d.lon,d.lat])[0])
         .attr('cy', d => vis.projection([d.lon,d.lat])[1]);
 
@@ -109,15 +109,15 @@ class GeoMap {
         });
 
     // Append text labels to show the titles of all sights
-    const geoSymbolLabels = vis.chart.selectAll('.geo-label')
-        .data(vis.data)
-      .join('text')
-        .attr('class', 'geo-label')
-        .attr('dy', '.35em')
-        .attr('text-anchor', 'middle')
-        .attr('x', d => vis.projection([d.lon,d.lat])[0])
-        .attr('y', d => (vis.projection([d.lon,d.lat])[1] - vis.symbolScale(d.visitors) - 8))
-        .text(d => d.name);
+    // const geoSymbolLabels = vis.chart.selectAll('.geo-label')
+    //     .data(vis.data)
+    //   .join('text')
+    //     .attr('class', 'geo-label')
+    //     .attr('dy', '.35em')
+    //     .attr('text-anchor', 'middle')
+    //     .attr('x', d => vis.projection([d.lon,d.lat])[0])
+    //     .attr('y', d => (vis.projection([d.lon,d.lat])[1] - 10))
+    //     .text(d => d.name);
 
     // Append text labels with the number of visitors for two sights (to be used as a legend) 
     const geoSymbolVisitorLabels = vis.chart.selectAll('.geo-visitor-label')

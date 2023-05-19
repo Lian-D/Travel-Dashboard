@@ -1,8 +1,20 @@
-name,country,visitors,lat,lon
-Petra,Jordan,2,30.3273975,35.4464006
-Taj Mahal,India,6.5,27.175014,78.042152
-Roman Colosseum,Italy,7,41.89056,12.49427
-Machu Picchu,Peru,4.4,-13.1644186,-72.544764
-Great Wall,China,10,40.43840027,116.5613785
-Christ the Redeemer,Brazil,2,-22.95189095,-43.21048355
-Chichen Itza,Mexico,2,20.96305847,-89.57824707
+name,country,visitors,lat,lon,complete?
+Honolulu,USA,2022,21.3099,-157.8581,true
+Montreal + Toronto,Canada,2018,43.651070,-79.347015,true
+Harbin,China,2018,45.7567," 126.6424",true
+Xiamen,China,2018,24.4795,118.0895,true
+Seattle,USA,2017,47.6062,-122.3321,true
+Portland,USA,2017,45.5152,-122.6784,true
+San Fran,USA,2017,37.7749,-122.4194,true
+LA,USA,2017,34.0522,-118.2437,true
+Ottawa,Canada,2016,45.4215,-75.6972,true
+Changsha,China,"2008,2018",28.2278,112.9389,true
+Zhangjiajie,China,"2008,2018",29.1167," 110.4784",true
+Spokane,USA,2015,47.6588,-117.4260,true
+Kelowna + Penticton + Osoyoos,Canada,2014,49.8880,-119.4960,true
+Victoria,Canada,2011,48.4284,-123.3656,true
+Tofino,Canada,2011,49.1530,-125.9066,true
+HongKong,China,2008,22.3193,114.1694,true
+ShangHai,China,2008,31.2304," 121.4737",true
+Edmonton,Canada,2007,53.5461,-113.4937,true
+Banff,Canada,2007,51.1784,-115.5708,true

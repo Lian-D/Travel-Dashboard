@@ -1,6 +1,13 @@
+
 body {
-  font-family: Helvetica, sans-serif;
-  background: #fafcff;
+  font-family: Open Sans;
+  padding: 20px 40px;
+  /* background-color: #3b3a3a */
+}
+h1 {
+  font-family: Open Sans;
+  margin: auto;
+  text-align: center;
 }
 
 .geo-path {
