@@ -22,7 +22,7 @@ h1 {
 .geo-path {
   fill: #1b1b1b;
 }
-.geo-boundary-path {
+.geo-boundary-path {  
   stroke: #e0f3d4;  
   fill: none;
   stroke-width: 1;
@@ -43,7 +43,14 @@ h1 {
 
 .geo-symbol-planned {
   fill: #f04603;
-  stroke: #fafafa;
+  stroke: #fafafa;  
+  stroke-width: 1;
+  fill-opacity: 0.9;
+}
+
+.geo-symbol-danger {
+  fill: #df0c0c23;
+  stroke: #fafafa13;
   stroke-width: 1;
   fill-opacity: 0.9;
 }

@@ -15,7 +15,7 @@ class GeoMap {
     this.geoData = _geoData;
     this.data = _data;
     this.initVis();
-  }
+  }     
 
   /**
    * We initialize scales/axes and append static elements, such as axis titles.
@@ -107,6 +107,8 @@ class GeoMap {
           return 'geo-symbol-done';
         } else if (d.time.includes("Planned")){
           return 'geo-symbol-progress';
+        }else if (d.danger == 'true'){
+          return 'geo-symbol-danger';
         }else {
           return 'geo-symbol-planned';
         }
