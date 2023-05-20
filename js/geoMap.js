@@ -8,7 +8,7 @@ class GeoMap {
     this.config = {
       parentElement: _config.parentElement,
       containerWidth: _config.containerWidth || 1800,
-      containerHeight: _config.containerHeight || 850,
+      containerHeight: _config.containerHeight || 800,
       margin: _config.margin || { top: 0, right: 0, bottom: 0, left: 0 },
       tooltipPadding: 10,
     };
@@ -38,7 +38,9 @@ class GeoMap {
       .select(vis.config.parentElement)
       .append('svg')
       .attr('width', vis.config.containerWidth)
-      .attr('height', vis.config.containerHeight);
+      .attr('height', vis.config.containerHeight)
+      .attr('display', 'block')
+      .style("margin", "auto");
 
     // Append group element that will contain our actual chart
     // and position it according to the given margin config
@@ -60,15 +62,11 @@ class GeoMap {
 
     vis.geoPath = d3.geoPath().projection(vis.projection);
 
-    vis.symbolScale = d3.scaleSqrt().range([4, 25]);
-
     vis.updateVis();
   }
 
   updateVis() {
     let vis = this;
-
-    vis.symbolScale.domain(d3.extent(vis.data, (d) => d.visitors));
 
     vis.data.forEach((d) => {
       d.showLabel = d.name == 'Chichen Itza' || d.name == 'Great Wall';
@@ -107,11 +105,13 @@ class GeoMap {
         console.log(d);
         if (d.complete == 'true') {
           return 'geo-symbol-done';
-        } else {
+        } else if (d.time.includes("Planned")){
+          return 'geo-symbol-progress';
+        }else {
           return 'geo-symbol-planned';
         }
       })
-      .attr('r', (d) => 3)
+      .attr('r', 3.5)
       .attr('cx', (d) => vis.projection([d.lon, d.lat])[0])
       .attr('cy', (d) => vis.projection([d.lon, d.lat])[1]);
 
@@ -124,7 +124,7 @@ class GeoMap {
           .style('left', `${event.pageX + vis.config.tooltipPadding}px`)
           .style('top', `${event.pageY + vis.config.tooltipPadding}px`).html(`
               <div class="tooltip-title">${d.name}</div>
-              <div>${d.country}&nbsp; | visited: &nbsp;${d.visitors}</div>
+              <div>${d.country}&nbsp; | visited: &nbsp;${d.time}</div>
             `);
       })
       .on('mouseleave', () => {
@@ -144,20 +144,20 @@ class GeoMap {
     //     .text(d => d.name);
 
     // Append text labels with the number of visitors for two sights (to be used as a legend)
-    const geoSymbolVisitorLabels = vis.chart
-      .selectAll('.geo-visitor-label')
-      .data(vis.data)
-      .join('text')
-      .filter((d) => d.showLabel)
-      .attr('class', 'geo-visitor-label')
-      .attr('dy', '.35em')
-      .attr('text-anchor', 'middle')
-      .attr('x', (d) => vis.projection([d.lon, d.lat])[0])
-      .attr(
-        'y',
-        (d) =>
-          vis.projection([d.lon, d.lat])[1] + vis.symbolScale(d.visitors) + 12
-      )
-      .text((d) => `${d.visitors}`);
+    // const geoSymbolVisitorLabels = vis.chart
+    //   .selectAll('.geo-visitor-label')
+    //   .data(vis.data)
+    //   .join('text')
+    //   .filter((d) => d.showLabel)
+    //   .attr('class', 'geo-visitor-label')
+    //   .attr('dy', '.35em')
+    //   .attr('text-anchor', 'middle')
+    //   .attr('x', (d) => vis.projection([d.lon, d.lat])[0])
+    //   .attr(
+    //     'y',
+    //     (d) =>
+    //       vis.projection([d.lon, d.lat])[1] + vis.symbolScale(d.visitors) + 12
+    //   )
+      // .text((d) => `${d.visitors}`);
   }
 }

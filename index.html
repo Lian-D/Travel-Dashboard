@@ -2,19 +2,26 @@
 <html>
 <head>
     <title>Lian's Travel Map</title>
-    <link rel="icon" href="favicon.ico"/>
+    <link rel="shortcut icon" type='image/x-icon' href="favicon.ico?"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body text-align: center;>
     <!-- Add HTML content, SVG drawing area, ... -->
     <div class="header">
       <h1>
-        🗺️ Lian's World Domination Plans📍
+        🗺️Lian's Travel Plans📍
       </h1>
     </div>
 <body>
     <div id="map" style="margin: auto; display: block;" text-align: center;></div>
     <div id="tooltip"></div>
+
+    <ul class="legend">
+      <li class="legend-btn" data-difficulty="Visited"><span class="legend-symbol"></span> Visited</li>
+      <li class="legend-btn" data-difficulty="Planned"><span class="legend-symbol"></span> Planned</li>
+      <li class="legend-btn" data-difficulty="Future Planned"><span class="legend-symbol"></span> Future Planned</li>
+  </ul>
+
     
     <script src="js/d3.v6.min.js"></script>
     <script src="js/topojson.v3.js"></script>
